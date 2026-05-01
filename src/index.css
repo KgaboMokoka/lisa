@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');/* index.css */
+
+
+:root {}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+#hero {
+  background-image: url(/src/assets/stitch-angel.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+#scroll-down-arrow {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+#content {
+  background-image: url(/src/assets/paper-texture.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem 4rem;
+  box-sizing: border-box;
+}
+
+#content p {
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.85;
+  font-size: 15px;
+  color: #2a2a2a;
+  margin: 0.6rem 0;
+}
+
+#intro {
+  font-size: 17px !important;
+  font-style: italic;
+  margin-bottom: 1.2rem !important;
+}
+
+.letter-body {
+  font-size: 15px;
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.85;
+  color: #2a2a2a;
+  margin: 0.8rem 0;
+}
+
+.choice-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.6rem 0;
+  position: relative;
+  width: 340px;
+  height: 120px;
+}
+
+.btn-yes {
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: none;
+  background: #d4537e;
+  color: white;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btn-yes:hover {
+  background: #b83d66;
+  transform: scale(1.06);
+}
+
+.btn-no {
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: 1.5px solid #ccc;
+  background: transparent;
+  color: #aaa;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+}
+
+#love-para {
+  margin-top: 1.6rem !important;
+  font-style: italic;
+}
+
+#love-highlight {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-style: italic;
+  color: #d4537e;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.polaroid {
+  background: #f5f5f5;
+  padding: 16px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  z-index: 10;
+}
+
+.polaroid-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.polaroid-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.polaroid-date {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.polaroid-caption {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+}
+
+#gallery {
+  display: grid;
+
+  /* responsive columns */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+  gap: 40px;
+  padding: 40px;
+
+  justify-items: center; /* center polaroids */
+}
+
+#gallery{
+  background-image: url(/src/assets/scrapbook.avif);
+  height: fit-content;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
