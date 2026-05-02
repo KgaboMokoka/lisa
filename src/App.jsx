@@ -21,6 +21,8 @@ import HoldingHands from './assets/holdingHands.jpeg'
 import BigBacks from './assets/bigBack.jpeg'
 import BreadInit from './assets/breadInit.jpeg'
 import Twin from './assets/twin.jpeg'
+import Tentacles from './assets/tentacles.jpeg'
+
 
 
 
@@ -226,6 +228,12 @@ function App() {
     image={Twin}
     date="19/04"
     caption="'sup twin"
+  />
+  
+  <Polaroid
+    image={Tentacles}
+    date="19/04"
+    caption="'Tentacle twin"
   />
 </div>
     </>
