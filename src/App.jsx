@@ -22,6 +22,9 @@ import BigBacks from './assets/bigBack.jpeg'
 import BreadInit from './assets/breadInit.jpeg'
 import Twin from './assets/twin.jpeg'
 import Tentacles from './assets/tentacles.jpeg'
+import DateOne from './assets/dateone.jpeg'
+import DateTwo from './assets/datetwo.jpeg'
+import DayAfter from './assets/after.jpeg'
 
 
 
@@ -233,7 +236,25 @@ function App() {
   <Polaroid
     image={Tentacles}
     date="19/04"
-    caption="'Tentacle twin"
+    caption="'Tentacle twin'"
+  />
+
+  <Polaroid
+    image={DateOne}
+    date="19/04"
+    caption="Yuhhh"
+  />
+
+  <Polaroid
+    image={DateTwo}
+    date="02/05"
+    caption="funny mirror"
+  />
+
+  <Polaroid
+    image={DayAfter}
+    date="02/05"
+    caption="Shes my girlfriend!"
   />
 </div>
     </>
