@@ -242,7 +242,7 @@ function App() {
   <Polaroid
     image={DateOne}
     date="19/04"
-    caption="Yuhhh"
+    caption="We off the market!"
   />
 
   <Polaroid
