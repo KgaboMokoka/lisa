@@ -96,7 +96,7 @@ export default function TimeTogether() {
           fontWeight: 400,
         }}
       >
-        since we started were official
+        since we were official
       </p>
       <div
         style={{
