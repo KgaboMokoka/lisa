@@ -25,6 +25,7 @@ import Tentacles from './assets/tentacles.jpeg'
 import DateOne from './assets/dateone.jpeg'
 import DateTwo from './assets/datetwo.jpeg'
 import DayAfter from './assets/after.jpeg'
+import TimeTogether from '../components/together'
 
 
 
@@ -101,6 +102,7 @@ function App() {
 
       <div id='content'>
         <TimeSince />
+        <TimeTogether/>
         <p id='intro'>So yea I've got a few things I've got to tell ya…</p>
         <p className='letter-body'>
           You are a beautiful woman, not a girl not a female or any other term, you are a beautiful woman.
