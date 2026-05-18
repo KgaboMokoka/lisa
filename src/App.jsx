@@ -29,7 +29,7 @@ import TimeTogether from '../components/together.jpeg'
 import Babies from '../components/babiesTwo.jpeg'
 import Unaware from '../components/unaware.jpeg'
 import StudyDateOne from '../components/studyDate.jpeg'
-import StudyDateTwo from '../components/studyDateTwo'
+import StudyDateTwo from '../components/studyDateTwo.jpeg'
 
 
 
