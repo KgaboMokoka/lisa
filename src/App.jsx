@@ -4,6 +4,7 @@ import './App.css'
 import TimeSince from '../components/timer'
 import song from './assets/coffee.mp3'
 import Polaroid from '../components/polaroid'
+import TimeTogether from '../components/together'
 
 // images
 import CoffeeDate from './assets/coffeeDate.jpeg'
@@ -25,11 +26,11 @@ import Tentacles from './assets/tentacles.jpeg'
 import DateOne from './assets/dateone.jpeg'
 import DateTwo from './assets/datetwo.jpeg'
 import DayAfter from './assets/after.jpeg'
-import TimeTogether from '../components/together.jpeg'
-import Babies from '../components/babiesTwo.jpeg'
-import Unaware from '../components/unaware.jpeg'
-import StudyDateOne from '../components/studyDate.jpeg'
-import StudyDateTwo from '../components/studyDateTwo.jpeg'
+import Babies from './assets/babies.jpeg'
+import Unaware from './assets/unaware.jpeg'
+import StudyDate from './assets/studyDate.jpeg'
+import StudyDateTwo from './assets/studyDateTwo.jpeg'
+
 
 
 
@@ -276,7 +277,7 @@ function App() {
   />
 
   <Polaroid
-    image={StudyDateOne}
+    image={StudyDate}
     date="17/05"
     caption="Study Date"
   />
