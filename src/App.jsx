@@ -25,7 +25,11 @@ import Tentacles from './assets/tentacles.jpeg'
 import DateOne from './assets/dateone.jpeg'
 import DateTwo from './assets/datetwo.jpeg'
 import DayAfter from './assets/after.jpeg'
-import TimeTogether from '../components/together'
+import TimeTogether from '../components/together.jpeg'
+import Babies from '../components/babiesTwo.jpeg'
+import Unaware from '../components/unaware.jpeg'
+import StudyDateOne from '../components/studyDate.jpeg'
+import StudyDateTwo from '../components/studyDateTwo'
 
 
 
@@ -257,6 +261,30 @@ function App() {
     image={DayAfter}
     date="02/05"
     caption="Shes my girlfriend!"
+  />
+
+  <Polaroid
+    image={Babies}
+    date="16/05"
+    caption="Our babies lol"
+  />
+
+  <Polaroid
+    image={Unaware}
+    date="16/05"
+    caption="Right where I want to be"
+  />
+
+  <Polaroid
+    image={StudyDateOne}
+    date="17/05"
+    caption="Study Date"
+  />
+
+  <Polaroid
+    image={StudyDateTwo}
+    date="17/05"
+    caption="Study Date II"
   />
 </div>
     </>
