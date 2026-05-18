@@ -262,30 +262,6 @@ function App() {
     date="02/05"
     caption="Shes my girlfriend!"
   />
-
-  <Polaroid
-    image={Babies}
-    date="16/05"
-    caption="Our babies lol"
-  />
-
-  <Polaroid
-    image={Unaware}
-    date="16/05"
-    caption="Right where I want to be"
-  />
-
-  <Polaroid
-    image={StudyDateOne}
-    date="17/05"
-    caption="Study Date"
-  />
-
-  <Polaroid
-    image={StudyDateTwo}
-    date="17/05"
-    caption="Study Date II"
-  />
 </div>
     </>
   )
