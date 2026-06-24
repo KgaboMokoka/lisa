@@ -31,6 +31,16 @@ import Unaware from './assets/unaware.jpeg'
 import StudyDate from './assets/studyDate.jpeg'
 import StudyDateTwo from './assets/studyDateTwo.jpeg'
 
+import Goofy from './assets/goofy.jpeg'
+import FineBabes from './assets/fineBabes.jpeg'
+import LoveLetter from './assets/loveLetter.jpeg'
+import DrunkLisa from './assets/drinkLisa.jpeg'
+import FirstWig from './assets/firstWig.jpeg'
+import GimbaLevel from './assets/gimbaLevel.jpeg'
+import GimbaTogether from './assets/gimbaTogether.jpeg'
+import NightNight from './assets/nightNight.jpeg'
+import TogetherForever from './assets/togetherForever.jpeg'
+
 
 
 
@@ -287,6 +297,70 @@ function App() {
     date="17/05"
     caption="Study Date II"
   />
+
+  <Polaroid
+    image={Goofy}
+    date="19/05"
+    caption="Goofy"
+  />
+
+  <Polaroid
+    image={FineBabes}
+    date="20/05"
+    caption="FINE BABES !!!"
+  />
+
+  <Polaroid
+    image={LoveLetter}
+    date="04/06"
+    caption="A Love Letter To YOU"
+  />
+
+  <Polaroid
+    image={DrunkLisa}
+    date="04/06"
+    caption="Drunk Lisa is funny :)"
+  />
+
+  <Polaroid
+    image={FirstWig}
+    date="10/06"
+    caption="First Wig init"
+  />
+
+  <Polaroid
+    image={GimbaLevel}
+    date="12/06"
+    caption="Gimba Level ?"
+  />
+
+  <Polaroid
+    image={GimbaTogether}
+    date="12/06"
+    caption="Time to leave"
+  />
+
+  <Polaroid
+    image={NightNight}
+    date="15/06"
+    caption="Night Night Nigga"
+  />
+
+  <Polaroid
+    image={TogetherForever}
+    date="20/06"
+    caption="Titanic ? "
+  />
+
+  <p className='letter-body'>
+          heyyyyyy, hiiiiii, how you doing ? <br />
+          life is hard but you make me harder... <br />
+          but on a serious note, life is hard life is confusing, life is chaotic, but you make me calm down make time slow down <br />
+          ( even if time flies when im with you ). <br /> <br />
+          we both lowkey going through it, but ayy mahn the grind dont stop till we make it, but as you said, "Take it easy on yourself and take breaks too"
+          I LOVE YOU ! 💖
+
+        </p>
 </div>
     </>
   )
