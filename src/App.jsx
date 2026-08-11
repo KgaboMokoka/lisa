@@ -30,7 +30,6 @@ import Babies from './assets/babies.jpeg'
 import Unaware from './assets/unaware.jpeg'
 import StudyDate from './assets/studyDate.jpeg'
 import StudyDateTwo from './assets/studyDateTwo.jpeg'
-
 import Goofy from './assets/goofy.jpeg'
 import FineBabes from './assets/fineBabes.jpeg'
 import LoveLetter from './assets/loveLetter.jpeg'
@@ -41,6 +40,10 @@ import GimbaTogether from './assets/gimbaTogether.jpeg'
 import NightNight from './assets/nightNight.jpeg'
 import TogetherForever from './assets/togetherForever.jpeg'
 
+import TwoPeasInAPod from './assets/twoPeasInAPod.jpeg'
+import KeaDate from './assets/keaDate.jpeg'
+import LisaDate from './assets/lisaDate.jpeg'
+import PeepThePose from './assets/peepThePose.jpeg'
 
 
 
@@ -361,6 +364,30 @@ function App() {
           I LOVE YOU ! 💖
 
         </p>
+
+  <Polaroid
+    image={TwoPeasInAPod}
+    date="07/08"
+    caption="Two Peas In A Pod "
+  />
+
+  <Polaroid
+    image={LisaDate}
+    date="07/08"
+    caption="Watch out she bites"
+  />
+
+  <Polaroid
+    image={KeaDate}
+    date="07/08"
+    caption="Just a chill dude"
+  />
+
+  <Polaroid
+    image={PeepThePose}
+    date="07/08"
+    caption=":)"
+  />
 </div>
     </>
   )
