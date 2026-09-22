@@ -39,11 +39,17 @@ import GimbaLevel from './assets/gimbaLevel.jpeg'
 import GimbaTogether from './assets/gimbaTogether.jpeg'
 import NightNight from './assets/nightNight.jpeg'
 import TogetherForever from './assets/togetherForever.jpeg'
-
 import TwoPeasInAPod from './assets/twoPeasInAPod.jpeg'
 import KeaDate from './assets/keaDate.jpeg'
 import LisaDate from './assets/lisaDate.jpeg'
 import PeepThePose from './assets/peepThePose.jpeg'
+
+import Aws from './assets/aws.jpeg'
+import AwsTags from './assets/awsTags.jpeg'
+import Darkness from './assets/darkness.jpeg'
+import Freaky from './assets/freaky.jpeg'
+import NewCut from './assets/newCut.jpeg'
+import UhmHello from './assets/uhmHello.jpeg'
 
 
 
@@ -387,6 +393,42 @@ function App() {
     image={PeepThePose}
     date="07/08"
     caption=":)"
+  />
+
+  <Polaroid
+    image={AwsTags}
+    date="18/08"
+    caption="We went to AWS Summit"
+  />
+
+  <Polaroid
+    image={Aws}
+    date="18/08"
+    caption="Main Keynote"
+  />
+
+  <Polaroid
+    image={NewCut}
+    date="27/08"
+    caption="New cut who dis ?"
+  />
+
+  <Polaroid
+    image={Freaky}
+    date="31/08"
+    caption="Shes freaky now"
+  />
+
+  <Polaroid
+    image={Darkness}
+    date="11/09"
+    caption="Thobela / Makadi & stuff"
+  />
+
+  <Polaroid
+    image={UhmHello}
+    date="14/09"
+    caption="Uhm... Hello there"
   />
 </div>
     </>
