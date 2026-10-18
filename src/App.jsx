@@ -43,13 +43,15 @@ import TwoPeasInAPod from './assets/twoPeasInAPod.jpeg'
 import KeaDate from './assets/keaDate.jpeg'
 import LisaDate from './assets/lisaDate.jpeg'
 import PeepThePose from './assets/peepThePose.jpeg'
-
 import Aws from './assets/aws.jpeg'
 import AwsTags from './assets/awsTags.jpeg'
 import Darkness from './assets/darkness.jpeg'
 import Freaky from './assets/freaky.jpeg'
 import NewCut from './assets/newCut.jpeg'
 import UhmHello from './assets/uhmHello.jpeg'
+
+import Serious from './assets/serious.jpeg'
+import Smiles from './assets/smiles.jpeg'
 
 
 
@@ -430,6 +432,26 @@ function App() {
     date="14/09"
     caption="Uhm... Hello there"
   />
+
+  <Polaroid
+    image={Serious}
+    date="17/10"
+    caption="Could be models mos"
+  />
+
+  <Polaroid
+    image={Smiles}
+    date="17/10"
+    caption="fine babes indeed"
+  />
+
+  <p className='letter-body'>
+          Idk what will happen when we go on the call later today, idk if mayne this is the last time i add anything to this website idk if yesterday was the last time ill hug you as my girlfriend idk if yesterday will be the last time i get to kiss you as my girlfriend. either way i love you, im proud of you, i will always wish nothing but the best for you. i want you to know how much i care about you and i wouldnt want you to compromise yourself for my sake. 
+    </p>
+
+    <p className='letter-body'>
+          i love you lisa, i really do ❤️
+    </p>
 </div>
     </>
   )
