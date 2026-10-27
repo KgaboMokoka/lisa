@@ -452,6 +452,8 @@ function App() {
     <p className='letter-body'>
           i love you lisa, i really do ❤️
     </p>
+
+    <p>I miss you and talking to you makes me happy.</p>
 </div>
     </>
   )
