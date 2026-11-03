@@ -453,7 +453,7 @@ function App() {
   />
 
   <p className='letter-body'>
-          Idk what will happen when we go on the call later today, idk if mayne this is the last time i add anything to this website idk if yesterday was the last time ill hug you as my girlfriend idk if yesterday will be the last time i get to kiss you as my girlfriend. either way i love you, im proud of you, i will always wish nothing but the best for you. i want you to know how much i care about you and i wouldnt want you to compromise yourself for my sake. 
+          Idk what will happen when we go on the call later today, idk if maybe this is the last time i add anything to this website idk if yesterday was the last time ill hug you as my girlfriend idk if yesterday will be the last time i get to kiss you as my girlfriend. either way i love you, im proud of you, i will always wish nothing but the best for you. i want you to know how much i care about you and i wouldnt want you to compromise yourself for my sake. 
     </p>
 
     <p className='letter-body'>
@@ -474,6 +474,17 @@ function App() {
     caption="Last selfie ?"
   />
 </div>
+
+<div id='content'>
+    <p className='p-2 m-2'>Im glade i was able to celebrate the new phone with you when i got it and when i saw you yesterday. I would have loved to celebrate other milestones with you - but as you said "I'll be there on graduation" so im holding you on that promise. <br/> 
+    "You the best i ever had" ~ Drake <br/> 
+    how i would love to be your fairytale, be your Mr.President, Motho wa ga o. I'd say what Motho waka is in shona but iwl i forgot😭but google translate says "munhu wangu" <br/>
+    Seeing you cry yesterday (2nd November) really hurt i dont like making you feel sad, angry or anything that isnt happy, excited, like you got butterflies in your stomach. 
+    At the end of the day i still want to think of you as motho waka, Mrs President, baby (still havent said it irl lol) <br />
+    <strong>❤️ YOU THE BEST AND I LOVE YOU ❤️</strong>
+    </p>
+</div>
+
     </>
   )
 }
