@@ -1,46 +1,48 @@
-import { useEffect, useState } from "react"
+import { useSharedTimerState } from "./TimerStateContext";
 
-export default function TimeSince() {
-    const startDate = new Date("2026-02-03T21:24:00");
-    const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-    const pad = (n) => String(n).padStart(2, "0");
+const startDate = new Date("2026-02-03T21:24:00").getTime();
+const pad = (n) => String(n).padStart(2, "0");
 
-    useEffect(() => {
-        const updateTimer = () => {
-            const diff = Date.now() - startDate;
-            setTime({
-                days:    Math.floor(diff / 86400000),
-                hours:   Math.floor(diff / 3600000) % 24,
-                minutes: Math.floor(diff / 60000) % 60,
-                seconds: Math.floor(diff / 1000) % 60,
-            });
-        };
-        updateTimer();
-        const interval = setInterval(updateTimer, 1000);
-        return () => clearInterval(interval);
-    }, []);
-
-    const Unit = ({ value, label }) => (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 56 }}>
-            <span style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
-                fontSize: 48, fontWeight: 400, lineHeight: 1,
-                fontVariantNumeric: "tabular-nums", letterSpacing: "-0.01em",
-            }}>
-                {pad(value)}
-            </span>
-            <span style={{ fontSize: 10, letterSpacing: "0.14em", color: "#c084a0", textTransform: "uppercase", marginTop: 8 }}>
-                {label}
-            </span>
-        </div>
-    );
-
-    const Sep = () => (
+const Unit = ({ value, label }) => (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 56 }}>
         <span style={{
             fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: 36, color: "#e8b4c8", paddingBottom: 14, lineHeight: 1,
-        }}>·</span>
-    );
+            fontSize: 48, fontWeight: 400, lineHeight: 1,
+            fontVariantNumeric: "tabular-nums", letterSpacing: "-0.01em",
+        }}>
+            {pad(value)}
+        </span>
+        <span style={{ fontSize: 10, letterSpacing: "0.14em", color: "#c084a0", textTransform: "uppercase", marginTop: 8 }}>
+            {label}
+        </span>
+    </div>
+);
+
+const Sep = () => (
+    <span style={{
+        fontFamily: "'Playfair Display', Georgia, serif",
+        fontSize: 36, color: "#e8b4c8", paddingBottom: 14, lineHeight: 1,
+    }}>·</span>
+);
+
+export default function TimeSince() {
+    const { timerState, now } = useSharedTimerState();
+    const elapsed = timerState
+        ? Math.max(
+            0,
+            (timerState.paused ? timerState.pausedAt : now) -
+                startDate -
+                timerState.totalPausedMs,
+        )
+        : null;
+    const time = elapsed === null
+        ? { days: "--", hours: "--", minutes: "--", seconds: "--" }
+        : {
+            days: Math.floor(elapsed / 86400000),
+            hours: Math.floor(elapsed / 3600000) % 24,
+            minutes: Math.floor(elapsed / 60000) % 60,
+            seconds: Math.floor(elapsed / 1000) % 60,
+        };
 
     return (
         <div style={{ padding: "2.5rem 0 2rem", textAlign: "center" }}>

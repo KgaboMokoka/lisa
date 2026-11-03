@@ -1,29 +1,27 @@
-import { useEffect, useState } from "react";
+import { useSharedTimerState } from "./TimerStateContext";
+
+const startDate = new Date("2026-05-02T00:00:00").getTime();
 
 export default function TimeTogether() {
-  const startDate = new Date("2026-05-02T00:00:00");
-  const [time, setTime] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const { timerState, now } = useSharedTimerState();
+  const elapsed = timerState
+    ? Math.max(
+        0,
+        (timerState.paused ? timerState.pausedAt : now) -
+          startDate -
+          timerState.totalPausedMs,
+      )
+    : null;
+  const time =
+    elapsed === null
+      ? { days: "--", hours: "--", minutes: "--", seconds: "--" }
+      : {
+          days: Math.floor(elapsed / 86400000),
+          hours: Math.floor(elapsed / 3600000) % 24,
+          minutes: Math.floor(elapsed / 60000) % 60,
+          seconds: Math.floor(elapsed / 1000) % 60,
+        };
   const pad = (n) => String(n).padStart(2, "0");
-
-  useEffect(() => {
-    const updateTimer = () => {
-      const diff = Date.now() - startDate;
-      setTime({
-        days: Math.floor(diff / 86400000),
-        hours: Math.floor(diff / 3600000) % 24,
-        minutes: Math.floor(diff / 60000) % 60,
-        seconds: Math.floor(diff / 1000) % 60,
-      });
-    };
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   const Unit = ({ value, label }) => (
     <div

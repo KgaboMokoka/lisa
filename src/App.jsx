@@ -5,6 +5,7 @@ import TimeSince from '../components/timer'
 import song from './assets/coffee.mp3'
 import Polaroid from '../components/polaroid'
 import TimeTogether from '../components/together'
+import { SharedTimerControls, TimerStateProvider } from '../components/SharedTimerState'
 
 // images
 import CoffeeDate from './assets/coffeeDate.jpeg'
@@ -49,9 +50,12 @@ import Darkness from './assets/darkness.jpeg'
 import Freaky from './assets/freaky.jpeg'
 import NewCut from './assets/newCut.jpeg'
 import UhmHello from './assets/uhmHello.jpeg'
-
 import Serious from './assets/serious.jpeg'
 import Smiles from './assets/smiles.jpeg'
+
+import FinalSelfie from './assets/finalSelfie.jpeg'
+import TouchTips from './assets/touchTips.jpeg'
+
 
 
 
@@ -127,8 +131,11 @@ function App() {
       </div>
 
       <div id='content'>
-        <TimeSince />
-        <TimeTogether/>
+        <TimerStateProvider>
+          <TimeSince />
+          <TimeTogether/>
+          <SharedTimerControls />
+        </TimerStateProvider>
         <p id='intro'>So yea I've got a few things I've got to tell ya…</p>
         <p className='letter-body'>
           You are a beautiful woman, not a girl not a female or any other term, you are a beautiful woman.
@@ -454,6 +461,18 @@ function App() {
     </p>
 
     <p>I miss you and talking to you makes me happy.</p>
+
+    <Polaroid
+    image={TouchTips}
+    date="02/11"
+    caption="Touching tips ig🕊️"
+  />
+
+  <Polaroid
+    image={FinalSelfie}
+    date="02/11"
+    caption="Last selfie ?"
+  />
 </div>
     </>
   )
