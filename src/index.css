@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap'); /* index.css */
 
-
-:root {}
+:root {
+}
 
 body {
   margin: 0;
@@ -26,7 +26,7 @@ body {
   font-size: 13px;
   letter-spacing: 0.12em;
   margin: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 #scroll-down-arrow {
@@ -41,8 +41,13 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(6px); }
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(6px);
+  }
 }
 
 #content {
@@ -105,7 +110,9 @@ body {
   font-family: Georgia, serif;
   cursor: pointer;
   letter-spacing: 0.06em;
-  transition: transform 0.15s, background 0.15s;
+  transition:
+    transform 0.15s,
+    background 0.15s;
 }
 
 .btn-yes:hover {
@@ -144,14 +151,16 @@ body {
   background: #f5f5f5;
   padding: 16px;
   width: 260px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transform: rotate(-2deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .polaroid:hover {
   transform: scale(1.05) rotate(0deg);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   z-index: 10;
 }
 
@@ -190,11 +199,45 @@ body {
   justify-items: center; /* center polaroids */
 }
 
-#gallery{
+#gallery {
   background-image: url(/src/assets/scrapbook.avif);
   height: fit-content;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.playlist-section h2 {
+  margin: 0.5rem 0 0.75rem;
+  color: #d4537e;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.playlist-section .playlist-link {
+  display: block;
+  width: fit-content;
+  margin: 0.5rem auto 1.5rem;
+  color: #b83d66;
+}
+
+.playlist-section .playlist-embed,
+.playlist-section .love-video {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.playlist-section .video-heading {
+  margin-top: 2rem;
+}
+
+.playlist-section .love-video {
+  max-height: 70vh;
+  background: #1b1015;
+  object-fit: contain;
 }

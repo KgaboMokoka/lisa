@@ -55,10 +55,7 @@ import Smiles from './assets/smiles.jpeg'
 
 import FinalSelfie from './assets/finalSelfie.jpeg'
 import TouchTips from './assets/touchTips.jpeg'
-
-
-
-
+import IloveYou from './assets/ILoveYou-compressed.mp4'
 
 function App() {
   const noRef = useRef(null)
@@ -92,15 +89,15 @@ function App() {
       const bRect = btn.getBoundingClientRect()
       btn.style.position = 'absolute'
       btn.style.left = `${bRect.left - wRect.left}px`
-      btn.style.top  = `${bRect.top  - wRect.top}px`
+      btn.style.top = `${bRect.top - wRect.top}px`
       setHasRun(true)
     }
     const wRect = wrapper.getBoundingClientRect()
     const bRect = btn.getBoundingClientRect()
-    const maxX = wRect.width  - bRect.width
+    const maxX = wRect.width - bRect.width
     const maxY = wRect.height - bRect.height
     btn.style.left = `${Math.random() * maxX}px`
-    btn.style.top  = `${Math.random() * maxY}px`
+    btn.style.top = `${Math.random() * maxY}px`
   }
 
   return (
@@ -112,14 +109,22 @@ function App() {
         onClick={() => {
           if (audioRef.current) {
             audioRef.current.muted = !audioRef.current.muted
-            setPlaying(p => !p)
+            setPlaying((p) => !p)
           }
         }}
         style={{
-          position: 'fixed', bottom: 16, right: 16, zIndex: 999,
-          background: 'rgba(255,255,255,0.7)', border: '1px solid #e8b4c8',
-          borderRadius: '999px', padding: '6px 14px', cursor: 'pointer',
-          fontSize: 13, color: '#d4537e', backdropFilter: 'blur(4px)'
+          position: 'fixed',
+          bottom: 16,
+          right: 16,
+          zIndex: 999,
+          background: 'rgba(255,255,255,0.7)',
+          border: '1px solid #e8b4c8',
+          borderRadius: '999px',
+          padding: '6px 14px',
+          cursor: 'pointer',
+          fontSize: 13,
+          color: '#d4537e',
+          backdropFilter: 'blur(4px)',
         }}
       >
         {playing ? '♪ music on' : '♪ music off'}
@@ -133,28 +138,32 @@ function App() {
       <div id='content'>
         <TimerStateProvider>
           <TimeSince />
-          <TimeTogether/>
+          <TimeTogether />
           <SharedTimerControls />
         </TimerStateProvider>
         <p id='intro'>So yea I've got a few things I've got to tell ya…</p>
         <p className='letter-body'>
-          You are a beautiful woman, not a girl not a female or any other term, you are a beautiful woman.
-          You say that I bring out the girl's girl out of you which makes me happy ( you make me happy ).
-          You make me want to push myself a lot more so that I can give you the world you want, a world
-          which I'd want to be a part of. Be it us driving a Porsche, or us just traveling the world
-          together — either way you make me want to be more and do more.
+          You are a beautiful woman, not a girl not a female or any other term, you are a beautiful
+          woman. You say that I bring out the girl's girl out of you which makes me happy ( you make
+          me happy ). You make me want to push myself a lot more so that I can give you the world
+          you want, a world which I'd want to be a part of. Be it us driving a Porsche, or us just
+          traveling the world together — either way you make me want to be more and do more.
         </p>
         <p className='letter-body'>
-          Each mini date we had made me happy, made me think "you know what? Maybe this is the one" —
-          and I really do hope you are. So, Lisa Tadhliwa…
+          Each mini date we had made me happy, made me think "you know what? Maybe this is the one"
+          — and I really do hope you are. So, Lisa Tadhliwa…
         </p>
         <p className='letter-body' style={{ fontStyle: 'italic', fontSize: 17 }}>
           will you be my girlfriend?
         </p>
         {!answered ? (
           <div className='choice-wrapper' ref={wrapperRef}>
-            <button className='btn-yes' onClick={() => setAnswered(true)}>yes ♥</button>
-            <button className='btn-no' ref={noRef} onMouseEnter={runAway}>no</button>
+            <button className='btn-yes' onClick={() => setAnswered(true)}>
+              yes ♥
+            </button>
+            <button className='btn-no' ref={noRef} onMouseEnter={runAway}>
+              no
+            </button>
           </div>
         ) : (
           <p style={{ color: '#d4537e', fontStyle: 'italic', fontSize: 17, margin: '1.6rem 0' }}>
@@ -162,329 +171,188 @@ function App() {
           </p>
         )}
 
-
         <p id='love-para' className='letter-body'>
-          Also — this gives me the opportunity to say the three words I've been meaning to say to you
-          for the longest yoh...but any ways Mrs President, 
+          Also — this gives me the opportunity to say the three words I've been meaning to say to
+          you for the longest yoh...but any ways Mrs President,
         </p>
         <span id='love-highlight'>I love you ❤️</span>
       </div>
 
-      <div id="gallery">
-
+      <div id='gallery'>
         <div>
           <h1>Our Gallery</h1>
           <p>
-            every moment with you feels good, every moment with you makes me happy, i may not be the best but i will most definitely try my best, as i said before i want to give you the world, and a world i can live in with you. <br />
-            trust and believe that i always want to ( just tell me lil nigga, i am not some psychic). <br />
+            every moment with you feels good, every moment with you makes me happy, i may not be the
+            best but i will most definitely try my best, as i said before i want to give you the
+            world, and a world i can live in with you. <br />
+            trust and believe that i always want to ( just tell me lil nigga, i am not some
+            psychic). <br />
             i'm glad i met you, and i love you !
-            <br /><br />
-            p.s this gallery needs to be filled to the brim, so more pictures please. 
+            <br />
+            <br />
+            p.s this gallery needs to be filled to the brim, so more pictures please.
           </p>
         </div>
-        
-  <Polaroid
-    image={CoffeeDate}
-    date="03/03"
-    caption="Got coffee"
-  />
 
-  <Polaroid
-    image={GridLisa}
-    date="13/03"
-    caption="Fine babes"
-  />
+        <Polaroid image={CoffeeDate} date='03/03' caption='Got coffee' />
 
-  <Polaroid
-    image={GridMeLisa}
-    date="20/03"
-    caption="Could only see you for an hour"
-  />
+        <Polaroid image={GridLisa} date='13/03' caption='Fine babes' />
 
-  <Polaroid
-    image={GridMeLisaTwo}
-    date="20/03"
-    caption="I just cant get over you"
-  />
+        <Polaroid image={GridMeLisa} date='20/03' caption='Could only see you for an hour' />
 
+        <Polaroid image={GridMeLisaTwo} date='20/03' caption='I just cant get over you' />
 
-  <Polaroid
-    image={LisaPlushy}
-    date="22/03"
-    caption="Study break w little old me"
-  />
+        <Polaroid image={LisaPlushy} date='22/03' caption='Study break w little old me' />
 
-  <Polaroid
-    image={LisaSleeping}
-    date="22/03"
-    caption="Yea, I just like looking at you"
-  />
+        <Polaroid image={LisaSleeping} date='22/03' caption='Yea, I just like looking at you' />
 
-  <Polaroid
-    image={TomLizard}
-    date="28/03"
-    caption="My favourite person"
-  />
+        <Polaroid image={TomLizard} date='28/03' caption='My favourite person' />
 
-  <Polaroid
-    image={Stalker}
-    date="28/03"
-    caption="I think I got a stalker..."
-  />
+        <Polaroid image={Stalker} date='28/03' caption='I think I got a stalker...' />
 
-  <Polaroid
-    image={LisaMeDate}
-    date="02/04"
-    caption="Went to Dappao"
-  />
+        <Polaroid image={LisaMeDate} date='02/04' caption='Went to Dappao' />
 
-  <Polaroid
-    image={HoldingHands}
-    date="08/04"
-    caption="I could hold you forever"
-  />
+        <Polaroid image={HoldingHands} date='08/04' caption='I could hold you forever' />
 
-  <Polaroid
-    image={Pictures}
-    date="08/04"
-    caption="Finally got actual pictures"
-  />
+        <Polaroid image={Pictures} date='08/04' caption='Finally got actual pictures' />
 
-  <Polaroid
-    image={BigBacks}
-    date="17/04"
-    caption="Big Backs"
-  />
+        <Polaroid image={BigBacks} date='17/04' caption='Big Backs' />
 
-  <Polaroid
-    image={BreadInit}
-    date="19/04"
-    caption="Bread Init"
-  />
+        <Polaroid image={BreadInit} date='19/04' caption='Bread Init' />
 
-  <Polaroid
-    image={Twin}
-    date="19/04"
-    caption="'sup twin"
-  />
-  
-  <Polaroid
-    image={Tentacles}
-    date="19/04"
-    caption="'Tentacle twin'"
-  />
+        <Polaroid image={Twin} date='19/04' caption="'sup twin" />
 
-  <Polaroid
-    image={DateOne}
-    date="02/05"
-    caption="We off the market!"
-  />
+        <Polaroid image={Tentacles} date='19/04' caption="'Tentacle twin'" />
 
-  <Polaroid
-    image={DateTwo}
-    date="02/05"
-    caption="funny mirror"
-  />
+        <Polaroid image={DateOne} date='02/05' caption='We off the market!' />
 
-  <Polaroid
-    image={DayAfter}
-    date="02/05"
-    caption="Shes my girlfriend!"
-  />
+        <Polaroid image={DateTwo} date='02/05' caption='funny mirror' />
 
-  <Polaroid
-    image={Babies}
-    date="16/05"
-    caption="Our babies lol"
-  />
+        <Polaroid image={DayAfter} date='02/05' caption='Shes my girlfriend!' />
 
-  <Polaroid
-    image={Unaware}
-    date="16/05"
-    caption="Right where I want to be"
-  />
+        <Polaroid image={Babies} date='16/05' caption='Our babies lol' />
 
-  <Polaroid
-    image={StudyDate}
-    date="17/05"
-    caption="Study Date"
-  />
+        <Polaroid image={Unaware} date='16/05' caption='Right where I want to be' />
 
-  <Polaroid
-    image={StudyDateTwo}
-    date="17/05"
-    caption="Study Date II"
-  />
+        <Polaroid image={StudyDate} date='17/05' caption='Study Date' />
 
-  <Polaroid
-    image={Goofy}
-    date="19/05"
-    caption="Goofy"
-  />
+        <Polaroid image={StudyDateTwo} date='17/05' caption='Study Date II' />
 
-  <Polaroid
-    image={FineBabes}
-    date="20/05"
-    caption="FINE BABES !!!"
-  />
+        <Polaroid image={Goofy} date='19/05' caption='Goofy' />
 
-  <Polaroid
-    image={LoveLetter}
-    date="04/06"
-    caption="A Love Letter To YOU"
-  />
+        <Polaroid image={FineBabes} date='20/05' caption='FINE BABES !!!' />
 
-  <Polaroid
-    image={DrunkLisa}
-    date="04/06"
-    caption="Drunk Lisa is funny :)"
-  />
+        <Polaroid image={LoveLetter} date='04/06' caption='A Love Letter To YOU' />
 
-  <Polaroid
-    image={FirstWig}
-    date="10/06"
-    caption="First Wig init"
-  />
+        <Polaroid image={DrunkLisa} date='04/06' caption='Drunk Lisa is funny :)' />
 
-  <Polaroid
-    image={GimbaLevel}
-    date="12/06"
-    caption="Gimba Level ?"
-  />
+        <Polaroid image={FirstWig} date='10/06' caption='First Wig init' />
 
-  <Polaroid
-    image={GimbaTogether}
-    date="12/06"
-    caption="Time to leave"
-  />
+        <Polaroid image={GimbaLevel} date='12/06' caption='Gimba Level ?' />
 
-  <Polaroid
-    image={NightNight}
-    date="15/06"
-    caption="Night Night Nigga"
-  />
+        <Polaroid image={GimbaTogether} date='12/06' caption='Time to leave' />
 
-  <Polaroid
-    image={TogetherForever}
-    date="20/06"
-    caption="Titanic ? "
-  />
+        <Polaroid image={NightNight} date='15/06' caption='Night Night Nigga' />
 
-  <p className='letter-body'>
+        <Polaroid image={TogetherForever} date='20/06' caption='Titanic ? ' />
+
+        <p className='letter-body'>
           heyyyyyy, hiiiiii, how you doing ? <br />
           life is hard but you make me harder... <br />
-          but on a serious note, life is hard life is confusing, life is chaotic, but you make me calm down make time slow down <br />
+          but on a serious note, life is hard life is confusing, life is chaotic, but you make me
+          calm down make time slow down <br />
           ( even if time flies when im with you ). <br /> <br />
-          we both lowkey going through it, but ayy mahn the grind dont stop till we make it, but as you said, "Take it easy on yourself and take breaks too"
-          I LOVE YOU ! 💖
-
+          we both lowkey going through it, but ayy mahn the grind dont stop till we make it, but as
+          you said, "Take it easy on yourself and take breaks too" I LOVE YOU ! 💖
         </p>
 
-  <Polaroid
-    image={TwoPeasInAPod}
-    date="07/08"
-    caption="Two Peas In A Pod "
-  />
+        <Polaroid image={TwoPeasInAPod} date='07/08' caption='Two Peas In A Pod ' />
 
-  <Polaroid
-    image={LisaDate}
-    date="07/08"
-    caption="Watch out she bites"
-  />
+        <Polaroid image={LisaDate} date='07/08' caption='Watch out she bites' />
 
-  <Polaroid
-    image={KeaDate}
-    date="07/08"
-    caption="Just a chill dude"
-  />
+        <Polaroid image={KeaDate} date='07/08' caption='Just a chill dude' />
 
-  <Polaroid
-    image={PeepThePose}
-    date="07/08"
-    caption=":)"
-  />
+        <Polaroid image={PeepThePose} date='07/08' caption=':)' />
 
-  <Polaroid
-    image={AwsTags}
-    date="18/08"
-    caption="We went to AWS Summit"
-  />
+        <Polaroid image={AwsTags} date='18/08' caption='We went to AWS Summit' />
 
-  <Polaroid
-    image={Aws}
-    date="18/08"
-    caption="Main Keynote"
-  />
+        <Polaroid image={Aws} date='18/08' caption='Main Keynote' />
 
-  <Polaroid
-    image={NewCut}
-    date="27/08"
-    caption="New cut who dis ?"
-  />
+        <Polaroid image={NewCut} date='27/08' caption='New cut who dis ?' />
 
-  <Polaroid
-    image={Freaky}
-    date="31/08"
-    caption="Shes freaky now"
-  />
+        <Polaroid image={Freaky} date='31/08' caption='Shes freaky now' />
 
-  <Polaroid
-    image={Darkness}
-    date="11/09"
-    caption="Thobela / Makadi & stuff"
-  />
+        <Polaroid image={Darkness} date='11/09' caption='Thobela / Makadi & stuff' />
 
-  <Polaroid
-    image={UhmHello}
-    date="14/09"
-    caption="Uhm... Hello there"
-  />
+        <Polaroid image={UhmHello} date='14/09' caption='Uhm... Hello there' />
 
-  <Polaroid
-    image={Serious}
-    date="17/10"
-    caption="Could be models mos"
-  />
+        <Polaroid image={Serious} date='17/10' caption='Could be models mos' />
 
-  <Polaroid
-    image={Smiles}
-    date="17/10"
-    caption="fine babes indeed"
-  />
+        <Polaroid image={Smiles} date='17/10' caption='fine babes indeed' />
 
-  <p className='letter-body'>
-          Idk what will happen when we go on the call later today, idk if maybe this is the last time i add anything to this website idk if yesterday was the last time ill hug you as my girlfriend idk if yesterday will be the last time i get to kiss you as my girlfriend. either way i love you, im proud of you, i will always wish nothing but the best for you. i want you to know how much i care about you and i wouldnt want you to compromise yourself for my sake. 
-    </p>
+        <p className='letter-body'>
+          Idk what will happen when we go on the call later today, idk if maybe this is the last
+          time i add anything to this website idk if yesterday was the last time ill hug you as my
+          girlfriend idk if yesterday will be the last time i get to kiss you as my girlfriend.
+          either way i love you, im proud of you, i will always wish nothing but the best for you. i
+          want you to know how much i care about you and i wouldnt want you to compromise yourself
+          for my sake.
+        </p>
 
-    <p className='letter-body'>
-          i love you lisa, i really do ❤️
-    </p>
+        <p className='letter-body'>i love you lisa, i really do ❤️</p>
 
-    <p>I miss you and talking to you makes me happy.</p>
+        <p>I miss you and talking to you makes me happy.</p>
 
-    <Polaroid
-    image={TouchTips}
-    date="02/11"
-    caption="Touching tips ig🕊️"
-  />
+        <Polaroid image={TouchTips} date='02/11' caption='Touching tips ig🕊️' />
 
-  <Polaroid
-    image={FinalSelfie}
-    date="02/11"
-    caption="Last selfie ?"
-  />
-</div>
+        <Polaroid image={FinalSelfie} date='02/11' caption='Last selfie ?' />
+      </div>
 
-<div id='content'>
-    <p className='p-2 m-2'>Im glade i was able to celebrate the new phone with you when i got it and when i saw you yesterday. I would have loved to celebrate other milestones with you - but as you said "I'll be there on graduation" so im holding you on that promise. <br/> 
-    "You the best i ever had" ~ Drake <br/> 
-    how i would love to be your fairytale, be your Mr.President, Motho wa ga o. I'd say what Motho waka is in shona but iwl i forgot😭but google translate says "munhu wangu" <br/>
-    Seeing you cry yesterday (2nd November) really hurt i dont like making you feel sad, angry or anything that isnt happy, excited, like you got butterflies in your stomach. 
-    At the end of the day i still want to think of you as motho waka, Mrs President, baby (still havent said it irl lol) <br />
-    <strong>❤️ YOU THE BEST AND I LOVE YOU ❤️</strong>
-    </p>
-</div>
+      <div id='content'>
+        <p className='p-2 m-2'>
+          Im glade i was able to celebrate the new phone with you when i got it and when i saw you
+          yesterday. I would have loved to celebrate other milestones with you - but as you said
+          "I'll be there on graduation" so im holding you on that promise. <br />
+          "You the best i ever had" ~ Drake <br />
+          how i would love to be your fairytale, be your Mr.President, Motho wa ga o. I'd say what
+          Motho waka is in shona but iwl i forgot😭but google translate says "munhu wangu" <br />
+          Seeing you cry yesterday (2nd November) really hurt i dont like making you feel sad, angry
+          or anything that isnt happy, excited, like you got butterflies in your stomach. At the end
+          of the day i still want to think of you as motho waka, Mrs President, baby (still havent
+          said it irl lol) <br />
+          <strong>❤️ YOU THE BEST AND I LOVE YOU ❤️</strong>
+        </p>
 
+        <div className='playlist-section'>
+          <h2>Playlist</h2>
+          <p>
+            I made a playlist for you. Took a bit of time finding songs and even longer to put them
+            together into a curated playlist that flows from slow to a more upbeat mood.
+          </p>
+          <a
+            className='playlist-link'
+            href='https://open.spotify.com/playlist/3Z8aohl89h852QW0I2uR1W?si=e016d927b1d44beb&pt=d55c022c448b992336187ef2ede67450'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Open the playlist in Spotify
+          </a>
+          <iframe
+            className='playlist-embed'
+            title='Our Spotify playlist'
+            src='https://open.spotify.com/embed/playlist/3Z8aohl89h852QW0I2uR1W?utm_source=generator&si=fdd80211de544d6a'
+            height='352'
+            allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+            loading='lazy'
+          />
+
+          <h2 className='video-heading'>A little video for you</h2>
+          <video className='love-video' controls playsInline preload='metadata'>
+            <source src={IloveYou} type='video/mp4' />
+            Your browser does not support the video element.
+          </video>
+        </div>
+      </div>
     </>
   )
 }
